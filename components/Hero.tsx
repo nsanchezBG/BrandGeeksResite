@@ -4,7 +4,7 @@ import { ArrowRight, ArrowDown } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-24 md:py-0">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-40 pb-20 md:py-0">
       
       {/* Background Image & Overlay */}
       <div className="absolute inset-0 w-full h-full z-0 bg-brand-dark">
@@ -24,7 +24,7 @@ const Hero: React.FC = () => {
         <div className="absolute bottom-[-20%] right-[10%] w-[50vw] h-[50vw] bg-blue-600/5 rounded-full blur-[128px] animate-blob animation-delay-2000 mix-blend-screen" />
       </div>
 
-      <div className="container mx-auto px-4 md:px-6 relative z-10 text-center pb-16 md:pb-0">
+      <div className="container mx-auto px-4 md:px-6 relative z-10 text-center md:mt-16">
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
