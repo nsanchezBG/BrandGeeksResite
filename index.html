@@ -8,8 +8,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Babel for in-browser compilation -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
     <script>
-      // EMERGENCY CLEANUP: Unregister any zombie Service Workers from previous projects (like the "Burger Run" game visible in logs)
+      // EMERGENCY CLEANUP: Unregister any zombie Service Workers
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.getRegistrations().then(function(registrations) {
           for(let registration of registrations) {
@@ -28,7 +32,7 @@
             },
             colors: {
               brand: {
-                dark: '#050505', // Más oscuro para contraste
+                dark: '#050505', 
                 gray: '#121212',
                 accent: '#8b5cf6',
                 highlight: '#d8b4fe',
@@ -37,6 +41,7 @@
             animation: {
               'blob': 'blob 7s infinite',
               'shimmer': 'shimmer 2s linear infinite',
+              'gradient-x': 'gradient-x 3s ease infinite',
             },
             keyframes: {
               blob: {
@@ -48,7 +53,17 @@
               shimmer: {
                 from: { backgroundPosition: '0 0' },
                 to: { backgroundPosition: '-200% 0' },
-              }
+              },
+              'gradient-x': {
+                '0%, 100%': {
+                    'background-size': '200% 200%',
+                    'background-position': 'left center'
+                },
+                '50%': {
+                    'background-size': '200% 200%',
+                    'background-position': 'right center'
+                },
+              },
             }
           }
         }
@@ -109,6 +124,7 @@
 </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="./index.tsx"></script>
+    <!-- Changed to text/babel for in-browser compilation -->
+    <script type="text/babel" data-type="module" data-presets="typescript,react" src="./index.tsx"></script>
   </body>
 </html>

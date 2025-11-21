@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { PROJECTS } from '../constants';
+import { PROJECTS } from '../constants.ts';
 import { ArrowUpRight } from 'lucide-react';
 
 const Portfolio: React.FC = () => {

@@ -10,7 +10,7 @@ import {
   Code2,
   Smartphone
 } from 'lucide-react';
-import { NavItem, Service, Project, SocialLink } from './types';
+import { NavItem, Service, Project, SocialLink } from './types.ts';
 
 export const NAV_ITEMS: NavItem[] = [
   { label: 'Inicio', href: '#home' },
